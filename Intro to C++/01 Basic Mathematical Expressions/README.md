@@ -144,5 +144,3 @@ BIDMAS Operator Precedence	✅ Completed
 Business Tax Calculation	✅ Completed
 
 Fahrenheit to Celsius Converter	✅ Completed
-
->>>>>>> a721b02 (changed folder names):Intro to C++/01 Basic Mathematical Expressions/README.md
