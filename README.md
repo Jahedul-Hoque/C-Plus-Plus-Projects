@@ -6,7 +6,19 @@
 ## **📌 Overview**
 This repository showcases **C++ projects** focused on **financial data analysis, market data processing, and trade analytics**.  Each project includes hands-on tasks such as **programming with low latency and financial computations**, which are crucial skills for C++ developers in trading firms, hedge funds, and banks.
 
-### ✅ Topics Covered:  
+### ✅ General Topics Covered:  
+
+1️⃣ **Pointers and References**   
+2️⃣ **Functions and Declarations**  
+3️⃣ **Recursions**  
+4️⃣ **Classes and Objects**
+5️⃣ **Inheritance and Polymorphism**  
+6️⃣ **Operator Overloading**  
+7️⃣ **Memory Management**  
+
+
+
+### ✅ DSA Topics Covered:  
 
 1️⃣ **Union-Find & Quick-Union** (Disjoint Sets)  
 2️⃣ **Mathematical Models & Complexity** (Big-O Notation)  
