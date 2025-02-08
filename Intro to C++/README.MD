@@ -88,10 +88,12 @@ CS50x Harvard - C++ Fundamentals
 "Data Structures and Algorithm Analysis in C++" by Mark Allen Weiss
 
 
-👨‍💻 About Me
+## 👨‍💻 About Me
 I’m Jad who currently works as an End User Service engineer at a Hedgefund looking to diversify his skillset. This repository is a way to solidify my learning and share knowledge with others. Feel free to contribute, suggest improvements, or fork the repo!
 
 📧 Email: jahedul.hoque12@gmail.com
+
 🔗 LinkedIn: https://www.linkedin.com/in/jahedul-hoque/
-🚀 GitHub: github.com/jahedul-hoque
+
+🚀 GitHub: https://www.github.com/jahedul-hoque
 
