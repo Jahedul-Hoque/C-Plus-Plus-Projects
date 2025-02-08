@@ -22,8 +22,11 @@ This repository documents my journey learning C++ from the ground up, focusing o
 
 
 ### Each module will have its own directory with:
+
 📄 Concept Summary – Notes explaining the topic in simple terms
+
 💻 Code Implementations – Well-documented C++ code examples
+
 📊 Exercises – Practice problems & solutions
 
 ## 📚 Topics Covered
