@@ -71,27 +71,27 @@ Sparse Vectors (sparse_vectors.cpp)
 🚀 How to Use This Repository
 
 ## 🌎 Resources & Further Reading
-📖 Courses:
+### 📖 Courses:
 
 Coursera: C++ Algorithms & Data Structures
+
 MIT OpenCourseWare - Introduction to Algorithms
+
 CS50x Harvard - C++ Fundamentals
-📚 Books:
+
+### 📚 Books:
 
 "Effective C++" by Scott Meyers
+
 "Algorithms" by Robert Sedgewick
+
 "Data Structures and Algorithm Analysis in C++" by Mark Allen Weiss
-📌 Progress Tracker
-Topic	Status
-Union-Find	✅ Completed
-Stacks & Queues	🔄 In Progress
-Sorting Algorithms	⏳ Upcoming
-Binary Trees	⏳ Upcoming
-Hash Tables	⏳ Upcoming
+
+
 👨‍💻 About Me
-I’m Jahedul Hoque, an aspiring C++ developer documenting my journey from IT support to software engineering. This repository is a way to solidify my learning and share knowledge with others. Feel free to contribute, suggest improvements, or fork the repo!
+I’m Jad who currently works as an End User Service engineer at a Hedgefund looking to diversify his skillset. This repository is a way to solidify my learning and share knowledge with others. Feel free to contribute, suggest improvements, or fork the repo!
 
 📧 Email: jahedul.hoque12@gmail.com
-🔗 LinkedIn: Jahedul Hoque
+🔗 LinkedIn: https://www.linkedin.com/in/jahedul-hoque/
 🚀 GitHub: github.com/jahedul-hoque
 
