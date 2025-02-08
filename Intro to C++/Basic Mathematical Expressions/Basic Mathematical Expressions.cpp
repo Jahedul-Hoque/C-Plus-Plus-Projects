@@ -49,7 +49,8 @@ int main()
 	cout << "Temperature is: " << celsius << endl;
 	cout << endl;
 
-	double result = floor(1.2); //uses the cmath library to call upon the function floor which rounds down to the nearest number making 1.2 become 1
+	double result = floor(1.2); 
+	//uses the cmath library to call upon the function floor which rounds down to the nearest number making 1.2 become 1
 	cout << result << endl;
 	cout << endl;
 
@@ -57,6 +58,7 @@ int main()
 	int randomNum = rand() % 5;
 	/* time function gives us the current seconds since january 1st 1970
 	if we feed that into srand, we can use the modulus function to reduce the size of the random number to the remainer of the divison of 5
+	this allows us to create a random number from 0-5 inclusive
 	*/
 	cout << randomNum << endl;
 }
