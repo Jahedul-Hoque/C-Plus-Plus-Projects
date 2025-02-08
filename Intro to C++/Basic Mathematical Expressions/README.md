@@ -38,17 +38,22 @@ County Tax: 2%
 
 Net Sales Calculation after tax
 
+
 double sales = 95000;
+
 
 double const StateTaxRate = 0.04;
 
 double StateTax = sales * StateTaxRate;
 
+
 double const CountyTaxRate = 0.02;
 
 double CountyTax = sales * CountyTaxRate;
 
+
 double TotalTax = StateTax + CountyTax;
+
 
 sales = sales - TotalTax;
 
