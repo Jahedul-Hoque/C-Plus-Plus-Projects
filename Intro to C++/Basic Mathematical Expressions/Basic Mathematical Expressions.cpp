@@ -47,6 +47,6 @@ int main()
 	cout << "Temperature is: " << celsius << endl;
 	cout << endl;
 
-	double result = floor(1.2);
+	double result = floor(1.2); //uses the cmath library to call upon the function floor which rounds down to the nearest number making 1.2 become 1
 	cout << result << endl;
 }
