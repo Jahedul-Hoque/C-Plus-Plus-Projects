@@ -1,9 +1,10 @@
+<h1 align="center">🚀 My C++ Projects</h1>
+<p align="center">
+  <b>Documenting my journey learning C++ as an End User Service Engineer at a HedgeFund</b>
+</p>
 
----
-
-## 📖 **Introduction to C++ (Learning Path)**  
-
-This section documents my structured **C++ learning path**, inspired by courses like Coursera.  
+## **📌 Overview**
+This repository showcases **C++ projects** focused on **financial data analysis, market data processing, and trade analytics**.  Each project includes hands-on tasks such as **programming with low latency and financial computations**, which are crucial skills for C++ developers in trading firms, hedge funds, and banks.
 
 ### ✅ Topics Covered:  
 
@@ -15,7 +16,7 @@ This section documents my structured **C++ learning path**, inspired by courses 
 6️⃣ **Symbol Tables (BSTs, Hash Tables, Red-Black Trees)**  
 7️⃣ **Geometric Algorithms (Convex Hull, KD-Trees)**  
 
-📌 **Each topic has its own subfolder in `intro-to-cpp/` with code implementations.**  
+📌 **Each topic has its own subfolder in `intro-to-cpp/` with code implementations and READMEs.**  
 
 ---
 
