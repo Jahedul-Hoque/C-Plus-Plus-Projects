@@ -33,3 +33,12 @@ Here, I apply C++ to build **financial models**, optimize **market data processi
 📌 **These will be stored in `trading-systems/` with proper documentation.**  
 
 ---
+
+## 👨‍💻 About Me
+I’m Jad who currently works as an End User Service engineer at a Hedgefund looking to diversify his skillset. This repository is a way to solidify my learning and share knowledge with others. Feel free to contribute, suggest improvements, or fork the repo!
+
+📧 Email: jahedul.hoque12@gmail.com
+
+🔗 LinkedIn: https://www.linkedin.com/in/jahedul-hoque/
+
+🚀 GitHub: https://www.github.com/jahedul-hoque
