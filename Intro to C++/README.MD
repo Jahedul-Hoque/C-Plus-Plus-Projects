@@ -21,8 +21,6 @@ This repository documents my journey learning C++ from the ground up, focusing o
 
 7️⃣ Memory Management
 
-### Each module will have its own directory with:
-
 
 ## 🌎 Resources & Further Reading
 ### 📖 Courses:
