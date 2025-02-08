@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int main()
@@ -49,4 +51,13 @@ int main()
 
 	double result = floor(1.2); //uses the cmath library to call upon the function floor which rounds down to the nearest number making 1.2 become 1
 	cout << result << endl;
+	cout << endl;
+
+	srand(time(0));
+	int randomNum = rand() % 5;
+	/* time function gives us the current seconds since january 1st 1970
+	if we feed that into srand, we can use the modulus function to reduce the size of the random number to the remainer of the divison of 5
+	*/
+	cout << randomNum << endl;
 }
+
