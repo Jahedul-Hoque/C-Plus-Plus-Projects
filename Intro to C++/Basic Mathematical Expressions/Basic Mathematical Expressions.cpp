@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -44,4 +45,8 @@ int main()
 	cin >> fahrenheit;
 	double celsius = (fahrenheit - 32) / 1.8;
 	cout << "Temperature is: " << celsius << endl;
+	cout << endl;
+
+	double result = floor(1.2);
+	cout << result << endl;
 }
