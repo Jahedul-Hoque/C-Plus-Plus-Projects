@@ -1,6 +1,5 @@
 <h1 align = "center"> 🧮 Basic Mathematical Expressions in C++ </h1>
 
-## This project explores **fundamental mathematical operations** in C++, covering:  
 
 ✅ Arithmetic operations (addition, subtraction, multiplication, division)  
 ✅ Incrementing & decrementing (`x++`, `++x`)  
