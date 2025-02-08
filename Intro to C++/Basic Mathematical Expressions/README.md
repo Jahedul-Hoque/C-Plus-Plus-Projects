@@ -29,7 +29,7 @@ int z = ++x; // x becomes 12, z = 12
 double j = 1 + 2 * 3; // BIDMAS applies: j = 7
 cout << "j is equal to " << j << endl;
 
-### 💰 2. Business Tax Calculation
+### 💰 3. Business Tax Calculation
 Given revenue: $95,000
 
 State Tax: 4%
