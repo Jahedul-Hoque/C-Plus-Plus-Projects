@@ -20,7 +20,7 @@ int main()
     cout << endl;
 
     int age = 23;
-    int* ReferenceAge = &age;
+    int *ReferenceAge = &age;
     //when outputting this, it will give you the memory address of "ReferenceAge" not the value itself
     cout << "My age is " << ReferenceAge << endl;
     //this will output the value of whats inside the memory address "ReferenceAge"
