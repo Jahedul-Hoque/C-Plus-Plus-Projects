@@ -18,7 +18,7 @@ int main()
 	cout << endl;
 	
 	
-	//Excerise: Imagine you have a business that generates $95,000 worth of revenue. You need to pay 4% state tax and 2% county tax. Make a program that calculuates your net sales
+	//Excerise 1: Imagine you have a business that generates $95,000 worth of revenue. You need to pay 4% state tax and 2% county tax. Make a program that calculuates your net sales
 
 	double sales = 95000;
 	cout << "Sales is generating $" << sales << endl;
@@ -38,7 +38,7 @@ int main()
 	cout << "Therefore the net sales will be $" << sales << endl;
 	cout << endl;
 
-	//Excercise: Make a basic calculator that takes in a temperature in Fahrenheit and converts it into celcius
+	//Excercise 2: Make a basic calculator that takes in a temperature in Fahrenheit and converts it into celcius
 
 	cout << "Fahrenheit: ";
 	int fahrenheit;
