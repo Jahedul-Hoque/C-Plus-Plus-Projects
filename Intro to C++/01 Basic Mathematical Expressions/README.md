@@ -18,7 +18,7 @@
 - **Incrementing & Decrementing (`x++`, `++x`)**  
 
 #### Example:  
-```
+```cpp
 int x = 10;
 int y = x++; // y = 10, x becomes 11
 int z = ++x; // x becomes 12, z = 12
@@ -28,7 +28,7 @@ double j = 1 + 2 * 3; // BIDMAS applies: j = 7
 cout << "j is equal to " << j << endl;
 
 ### 💰 3. Business Tax Calculation
-```
+```cpp
 //Given revenue: $95,000
 //State Tax: 4%
 //County Tax: 2%
