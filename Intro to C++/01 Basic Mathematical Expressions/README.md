@@ -1,15 +1,12 @@
-<<<<<<< HEAD:Intro to C++/Basic Mathematical Expressions/README.md
-# 🧮 Basic Mathematical Expressions in C++
+<h1 align = "center"> 🧮 Basic Mathematical Expressions in C++ </h1>
 
-This project explores **fundamental mathematical operations** in C++, covering:  
+## This project explores **fundamental mathematical operations** in C++, covering:  
+
 ✅ Arithmetic operations (addition, subtraction, multiplication, division)  
 ✅ Incrementing & decrementing (`x++`, `++x`)  
 ✅ **BIDMAS (Operator Precedence)**  
 ✅ Using `const` for tax calculations  
 ✅ Handling user input (`cin`) for conversions 
-
-
-## 🚀 Features  
 
 ## 🚀 Features Implemented  
 
@@ -62,8 +59,7 @@ sales = sales - TotalTax;
 
 ----
 
-🏁 Progress Tracker
-Feature	Status
+## 🏁 Progress Tracker
 
 Arithmetic Operations	✅ Completed
 
@@ -84,9 +80,6 @@ This project explores **fundamental mathematical operations** in C++, covering:
 ✅ **BIDMAS (Operator Precedence)**  
 ✅ Using `const` for tax calculations  
 ✅ Handling user input (`cin`) for conversions 
-
-
-## 🚀 Features  
 
 ## 🚀 Features Implemented  
 
