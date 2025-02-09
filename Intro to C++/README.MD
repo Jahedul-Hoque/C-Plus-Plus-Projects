@@ -8,13 +8,13 @@
 Welcome to my **C++ learning journey!** This repository contains various C++ projects that have helped me gain a deeper understanding of the language. Throughout these projects, I have explored key programming concepts such as **object-oriented programming (OOP)**, **recursion**, **dynamic memory allocation**, **operator overloading**, and more.
 
 ## ✅ Completed Projects:
-- 📌 [Pointers and References](./README%20(2).md)
-- 📌 [Trading Data & Price Calculation](./README%20(3).md)
-- 📌 [Recursion](./README%20(4).md)
-- 📌 [Object-Oriented Programming](./README%20(5).md)
-- 📌 [OOP with Inheritance](./README%20(6).md)
-- 📌 [Operator Overloading](./README%20(7).md)
-- 📌 [Dynamic Memory Allocation](./README%20(8).md)
+- 📌 [Pointers and References]
+- 📌 [Trading Data & Price Calculation]
+- 📌 [Recursion]
+- 📌 [Object-Oriented Programming]
+- 📌 [OOP with Inheritance]
+- 📌 [Operator Overloading]
+- 📌 [Dynamic Memory Allocation]
 
 ## ⏳ Upcoming Project:
 - 🚧 **Data Structures and Algorithms** (In Progress)
