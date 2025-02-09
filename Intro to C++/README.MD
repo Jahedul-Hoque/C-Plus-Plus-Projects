@@ -1,4 +1,3 @@
-# Introduction to C++ 🚀
 <div align="center">
 
 # 🚀 Introduction to C++ 🚀
