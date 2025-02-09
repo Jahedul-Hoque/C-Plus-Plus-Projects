@@ -1,4 +1,4 @@
-<h1 align:Centre> 📌 Operator Overloading in C++ </h1>
+<h1 align="center"> 📌 Operator Overloading in C++ </h1>
 
 ## 📖 Overview
 
