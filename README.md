@@ -18,7 +18,7 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 
 
 
-### ✅ DSA Topics Covered:  
+### ✅ Planned DSA Topics Covered:  
 
 1️⃣ **Union-Find & Quick-Union** (Disjoint Sets)  
 2️⃣ **Mathematical Models & Complexity** (Big-O Notation)  
