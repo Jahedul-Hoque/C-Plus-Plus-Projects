@@ -8,6 +8,8 @@ public:
     string Title;
     int BaseSalary;
     //These are attribues that can be given to Employee objects
+
+
     void work() {
         cout << "This person is working right now\n";
     }
