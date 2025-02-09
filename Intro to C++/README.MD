@@ -15,7 +15,7 @@ This repository documents my journey learning C++ from the ground up, focusing o
 
 4️⃣ Classes and Objects
 
-5️⃣ Inheritance and Polymorphism
+5️⃣ Inheritance
 
 6️⃣ Operator Overloading
 
