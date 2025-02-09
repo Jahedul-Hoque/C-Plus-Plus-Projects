@@ -19,45 +19,43 @@ Welcome to my **C++ learning journey!** This repository contains various C++ pro
 ## ⏳ Upcoming Project:
 - 🚧 **Data Structures and Algorithms** (In Progress)
 
-
-<<<<<<< HEAD
 5️⃣ Inheritance
 =======
 ## 🔑 Key Topics Covered
 Here are the C++ projects I have worked on, each demonstrating a specific concept:
->>>>>>> e955f0257627749acd29e81d8498eb61ca6c9816
 
-### 📌 [Pointers and References](./README%20(2).md)
+
+### 📌 [Pointers and References]
 - Understanding memory addresses and pointers.
 - Using the reference (`&`) and dereference (`*`) operators.
 - Working with null pointers and pointer arithmetic.
 
-### 📌 [Trading Data & Price Calculation](./README%20(3).md)
+### 📌 [Trading Data & Price Calculation]
 - Implementing **functions and arrays**.
 - Using loops to process data dynamically.
 - Performing calculations using **parameters and return values**.
 
-### 📌 [Recursion](./README%20(4).md)
+### 📌 [Recursion]
 - Implementing recursive functions.
 - Understanding base and recursive cases.
 - Real-world applications like factorial calculations.
 
-### 📌 [Object-Oriented Programming](./README%20(5).md)
+### 📌 [Object-Oriented Programming]
 - Creating **classes and objects**.
 - Defining attributes and methods.
 - Using constructors to initialize objects.
 
-### 📌 [OOP with Inheritance](./README%20(6).md)
+### 📌 [OOP with Inheritance]
 - Understanding **inheritance** and how child classes inherit properties from a parent class.
 - Overriding methods and extending class functionality.
 - Creating objects from different inherited classes.
 
-### 📌 [Operator Overloading](./README%20(7).md)
+### 📌 [Operator Overloading]
 - Customizing the behavior of **operators** (`+`, `-`, `==`).
 - Implementing operator overloading in C++ classes.
 - Encapsulation and modular code design.
 
-### 📌 [Dynamic Memory Allocation](./README%20(8).md)
+### 📌 [Dynamic Memory Allocation]
 - Using `new` and `delete` for **heap memory management**.
 - Allocating memory dynamically for variables and arrays.
 - Avoiding memory leaks and improving program efficiency.
