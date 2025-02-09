@@ -1,17 +1,19 @@
-<h1 align = "center"> 📈 Functions and Declarations in C++ 💹 <h1>
+<div align="center">
+
+# 📈 Trading Data & Price Calculation in C++ 💹
+
+</div>
 
 ## Overview
-
-This section of my C++ learning journey focuses on functions and their role in organizing reusable blocks of code. Functions are essential for structuring programs efficiently, especially in financial applications like trading systems.
+This section of my C++ learning journey focuses on **functions, arrays, and calculations**. Functions enable modular and reusable code, and arrays help store multiple values efficiently.
 
 ## 🔑 Key Concepts
+- 🛠️ **Functions** organize code into reusable blocks.
+- 📊 **Function Parameters** allow passing data dynamically.
+- 🔢 **Arrays** store multiple related values in a structured manner.
+- ➕ **Looping Through Arrays** enables calculations over datasets.
 
-#### 🛠️ Functions allow modular and reusable code.
-
-#### 📊 Function Parameters enable passing values to a function.
-
-#### 🖥️ Console Output (cout) is used to display trade data.
-
+## 💻 Code Example
 ```cpp
 #include <iostream>
 using namespace std;
@@ -20,10 +22,20 @@ void LoadTradingData(int TradeID, string TradeSymbol) {
     // Function initializes and prints trade data
     cout << "Trade ID: " << TradeID << "\n";
     cout << "Trade Symbol: " << TradeSymbol << "\n";
+    // Passes in variables TradeID and TradeSymbol as parameters
     cout << "Trade Security: Gold\n";
     cout << "Trade Date: 12:05:2024\n";
     cout << "Trade Quantity: 234\n";
     cout << "Trade Price: 31235\n";
+}
+
+double GetTotal(double prices[], int size) {
+    double total = 0;
+    for (int i = 0; i < size; i++) {
+        total += prices[i];
+        // Loops through array, summing up all prices
+    }
+    return total;
 }
 
 int main() {
@@ -32,30 +44,32 @@ int main() {
     string TradeSymbol = "Schonfeld Securities";
     // Declares variables to be passed as parameters to the function
     LoadTradingData(TradeID, TradeSymbol);
+
     // Invokes the function
+    double prices[] = { 235.34, 214.32, 543.34, 34.99 };
+    int size = sizeof(prices) / sizeof(prices[0]);
+    // Number of elements = total array size / size of one element
+    double total = GetTotal(prices, size);
+    // Calls GetTotal to sum the prices
+    cout << "$" << total;
 }
 ```
 
-### 📖 Explanation
+## 📖 Explanation
+### 1. **Loading Trade Data**
+   - `LoadTradingData()` takes `TradeID` and `TradeSymbol` as parameters.
+   - It outputs trade details including security, date, quantity, and price.
 
-#### 1. Defining a Function
-
-LoadTradingData() is a function that takes TradeID and TradeSymbol as parameters.
-
-It prints trade-related information using cout.
-
-#### 2. Calling a Function
-
-The main() function declares TradeID and TradeSymbol.
-
-It calls LoadTradingData() and passes the variables.
+### 2. **Calculating Total Prices**
+   - `GetTotal()` loops through the `prices` array.
+   - It sums all prices and returns the total.
+   - The `main()` function then prints the total amount.
 
 ## 🎯 Key Takeaways
+- ⚡ Functions help modularize code for better organization.
+- 📥 Arrays store multiple values efficiently.
+- 🔄 Loops iterate through arrays for calculations.
+- 📢 `cout` is used for structured output in C++.
 
-##### ⚡ Functions help organize code into reusable blocks.
+This project demonstrates handling trade data and performing price calculations in C++, reinforcing key programming concepts. 🚀
 
-##### 📥 Parameters allow functions to handle different inputs dynamically.
-
-##### 📢 cout is useful for displaying structured output in C++.
-
-##### This project demonstrates the use of functions in a trading data system, reinforcing key C++ programming concepts. 🚀
