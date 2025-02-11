@@ -1,5 +1,48 @@
 #include <iostream>
 
+class Node {
+public:
+    int value;
+    // this will be the value being assigned to Node
+    Node* nextNode;
+    // this will create a pointer called nextNode pointing to a node
+    Node(int value) {
+        this->value = value;
+    // this will take whatever paremeter being entered within node and assigned to the variable "value"
+        this->nextNode = nullptr;
+    /*  this then assigns the "nextNode" variable as nullptr as this class is only used to create a node
+        The other classes will define what the nextNode will point to depending on what class it is.
+    */ 
+    }
+};
+
+
+class LinkedList {
+
+private:
+    Node* head;
+    Node* tail;
+    int length;
+
+
+public:
+    LinkedList(int value) {
+
+        Node* newNode = new Node(value);
+        // the constructer Node will be invoked with a paremeter(value) and will be assigned to the address pointer "newNode"
+        head = newNode;
+        // head will point to the address newNode
+        tail = newNode;
+        length = 1;
+
+
+    }
+
+
+};
+
+
+
 int main()
 {
     /*          Linked list : Contains a head and a tail
@@ -18,6 +61,12 @@ int main()
 
                 Looking up by value: O(n) since you iterate through the nodes to find if the value exists
                 Looking up by index: O(n) since you iterate through the nodes to search for the index
+
+
+
+
+
+
     */ 
     
 }
