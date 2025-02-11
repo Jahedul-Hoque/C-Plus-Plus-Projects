@@ -9,11 +9,17 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 ### ✅ General Topics Covered:  
 
 1️⃣ **Pointers and References**   
+
 2️⃣ **Functions and Declarations**  
+
 3️⃣ **Recursions**  
-4️⃣ **Classes and Objects** <br>
+
+4️⃣ **Classes and Objects** 
+
 5️⃣ **Inheritance and Polymorphism**  
+
 6️⃣ **Operator Overloading**  
+
 7️⃣ **Memory Management**  
 
 
