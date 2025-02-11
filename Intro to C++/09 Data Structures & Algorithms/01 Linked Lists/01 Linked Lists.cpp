@@ -5,12 +5,12 @@ class Node {
 public:
     int value;
     // this will be the value being assigned to Node
-    Node* nextNode;
+    Node* NextNode;
     // this will create a pointer called nextNode pointing to a node
     Node(int value) {
         this->value = value;
     // this will take whatever paremeter being entered within node and assigned to the variable "value"
-        this->nextNode = nullptr;
+        this->NextNode = nullptr;
     /*  this then assigns the "nextNode" variable as nullptr as this class is only used to create a node
         The other classes will define what the nextNode will point to depending on what class it is.
     */ 
@@ -29,11 +29,11 @@ private:
 public:
     LinkedList(int value) {
 
-        Node* newNode = new Node(value);
+        Node* NewNode = new Node(value);
         // the constructer Node will be invoked with a paremeter(value) and will be assigned to the address pointer "newNode"
-        head = newNode;
+        head = NewNode;
         // head will point to the address newNode
-        tail = newNode;
+        tail = NewNode;
         length = 1;
 
 
@@ -47,7 +47,7 @@ public:
         // while temp doesnt equal to nullptr
             cout << temp->value << endl;
         // output the value that temp is pointing to
-            temp = temp->nextNode;
+            temp = temp->NextNode;
         // move temp to the next node
         }
 
