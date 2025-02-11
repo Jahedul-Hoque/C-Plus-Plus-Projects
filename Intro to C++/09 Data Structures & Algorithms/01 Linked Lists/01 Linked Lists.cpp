@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 class Node {
 public:
@@ -39,6 +40,31 @@ public:
     }
 
 
+    void PrintList() {
+        Node* temp = head;
+        //make a temporary pointer that holds the address that points to head
+        while (temp) {
+        // while temp doesnt equal to nullptr
+            cout << temp->value << endl;
+        // output the value that temp is pointing to
+            temp = temp->nextNode;
+        // move temp to the next node
+        }
+
+    }
+
+    void GetHead() {
+        cout << "Head: " << head->value << endl;
+    }
+
+    void GetTail() {
+        cout << "Tail: " << tail->value << endl;
+    }
+
+    void GetLength() {
+        cout << "Length: " << length << endl;
+    }
+
 };
 
 
@@ -62,12 +88,13 @@ int main()
                 Looking up by value: O(n) since you iterate through the nodes to find if the value exists
                 Looking up by index: O(n) since you iterate through the nodes to search for the index
 
-
-
-
-
-
     */ 
     
+    LinkedList* MyLinkedList = new LinkedList(4);
+
+    MyLinkedList->GetHead();
+    MyLinkedList->GetLength();
+    MyLinkedList->GetTail();
+    MyLinkedList->PrintList();
 }
 
