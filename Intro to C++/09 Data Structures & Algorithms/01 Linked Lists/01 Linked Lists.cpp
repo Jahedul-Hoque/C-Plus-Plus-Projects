@@ -71,7 +71,7 @@ public:
         while (temp) {
         // while temp doesnt equal to nullptr
 
-            cout << temp->value << endl;
+            cout << temp->value << " " << endl;
          // output the value that temp is pointing to
 
             temp = temp->NextNode;
@@ -79,6 +79,24 @@ public:
 
         }
 
+    }
+
+    void append(int value) {
+
+        Node* newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        // if linked list is empty, make head and tail equal newNode
+        }
+        else {
+            tail->NextNode = newNode;
+            tail = newNode;
+        // otherwise make the current tails nextNode equal to NewNode and make tail the newNode
+        }
+        length++;
+    
+     
     }
 
     void GetHead() {
@@ -123,6 +141,8 @@ int main()
     MyLinkedList->GetHead();
     MyLinkedList->GetLength();
     MyLinkedList->GetTail();
+    MyLinkedList->append(5);
+    MyLinkedList->append(4);
     MyLinkedList->PrintList();
 }
 
