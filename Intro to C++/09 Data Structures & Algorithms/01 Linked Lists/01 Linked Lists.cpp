@@ -5,16 +5,22 @@ class Node {
 public:
     int value;
     // this will be the value being assigned to Node
+
     Node* NextNode;
     // this will create a pointer called nextNode pointing to a node
+
     Node(int value) {
+
         this->value = value;
     // this will take whatever paremeter being entered within node and assigned to the variable "value"
+
         this->NextNode = nullptr;
     /*  this then assigns the "nextNode" variable as nullptr as this class is only used to create a node
         The other classes will define what the nextNode will point to depending on what class it is.
     */ 
     }
+
+    
 };
 
 
@@ -31,24 +37,46 @@ public:
 
         Node* NewNode = new Node(value);
         // the constructer Node will be invoked with a paremeter(value) and will be assigned to the address pointer "newNode"
+
         head = NewNode;
         // head will point to the address newNode
+
         tail = NewNode;
         length = 1;
 
 
     }
 
+    ~LinkedList() {
+        // the default destructor only deletes the head, tail and length
+        // so we have to create a destructor to also delete the nodes
+
+        Node* temp = head;
+       
+        while (head) {
+            head = head->NextNode;
+            delete temp;
+            temp = head;
+         // set a temporary pointer = to head and while head doesnt equal to node, set head = equal to the next node and delete temp
+         // move temp equal to the new head.
+
+        }
+    }
+
 
     void PrintList() {
         Node* temp = head;
         //make a temporary pointer that holds the address that points to head
+
         while (temp) {
         // while temp doesnt equal to nullptr
+
             cout << temp->value << endl;
-        // output the value that temp is pointing to
+         // output the value that temp is pointing to
+
             temp = temp->NextNode;
         // move temp to the next node
+
         }
 
     }
