@@ -99,6 +99,40 @@ public:
      
     }
 
+
+    void DeleteLast() {
+        if (length == 0) {
+            return;
+        }
+        // if linkedlist is empty then return
+        else {
+            Node* Temp = head;
+            Node* PreviousNode = head;
+
+        // set 2 pointers equal to head
+            while (Temp->NextNode) {
+                PreviousNode = Temp;
+                Temp = Temp->NextNode;
+                // while temps next node isnt nullptr, set previousNode equal to temp
+
+            }
+            tail = PreviousNode;
+        // once Temps next node becomes nullptr, the previous node should be the new tail so set tail = previous node
+
+            tail->NextNode = nullptr;
+        // cut the list off from the about-to-be-deleted node
+            length--;
+            if (length == 0) {
+                head = nullptr;
+                tail = nullptr;
+            }
+        // if the length of the list is now zero, set the tail/heads to be nullptr
+            delete Temp;
+        // finally delete temp
+        }
+
+    }
+
     void GetHead() {
         cout << "Head: " << head->value << endl;
     }
@@ -138,11 +172,27 @@ int main()
     
     LinkedList* MyLinkedList = new LinkedList(4);
 
-    MyLinkedList->GetHead();
-    MyLinkedList->GetLength();
-    MyLinkedList->GetTail();
+   
     MyLinkedList->append(5);
     MyLinkedList->append(4);
+    cout << "This is the current list: " << endl;
+    
     MyLinkedList->PrintList();
+    cout << endl;
+    MyLinkedList->GetHead();
+   
+    cout << endl;
+    MyLinkedList->GetLength();
+   
+    cout << endl;
+    MyLinkedList->GetTail();
+    cout << endl;
+
+
+    MyLinkedList->DeleteLast();
+    cout << "Linked List after deleting 1 value: " << endl;
+    MyLinkedList->PrintList();
+    cout << "Linked lists length after deleting that value - ";
+    MyLinkedList->GetLength();
 }
 
