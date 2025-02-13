@@ -99,17 +99,7 @@ public:
      
     }
 
-    void prepend(int value) {
-
-        Node* newNode = new Node(value);
-        if (length == 0) {
-
-            head = newNode;
-            tail = newNode;
-        }
-
-
-    }
+   
 
 
     void DeleteLast() {
@@ -145,6 +135,8 @@ public:
 
     }
 
+    
+
     void GetHead() {
         cout << "Head: " << head->value << endl;
     }
@@ -155,6 +147,60 @@ public:
 
     void GetLength() {
         cout << "Length: " << length << endl;
+    }
+
+   
+
+    void prepend(int value) {
+
+        Node* newNode = new Node(value);
+        if (length == 0) {
+
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            newNode->NextNode = head;
+            head = newNode;
+        }
+        length++;
+
+    }
+
+    void DeleteFirst() {
+
+        if (length == 0) {
+            return;
+        }
+        else {
+            Node* temp = head;
+            if (length == 1) {
+                head = nullptr;
+                tail = nullptr;
+            }
+            else
+            {
+                head = head->NextNode;
+
+            }
+            delete temp;
+            length--;
+        }
+
+    }
+
+    Node* get(int index) {
+
+        if (index < 0 || index >= length) {
+            return nullptr;
+        }
+        else {
+            Node* temp = head;
+            for (int i = 0; i < index; i++) {
+                temp = temp->NextNode;
+            }
+            return temp;
+        }
     }
 
 };
@@ -206,5 +252,10 @@ int main()
     MyLinkedList->PrintList();
     cout << "Linked lists length after deleting that value - ";
     MyLinkedList->GetLength();
+    cout << endl;
+    cout << MyLinkedList->get(1);
+    cout << endl;
+    cout << endl;
+    cout << endl;
 }
 
