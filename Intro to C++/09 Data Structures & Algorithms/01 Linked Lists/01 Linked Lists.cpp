@@ -99,6 +99,18 @@ public:
      
     }
 
+    void prepend(int value) {
+
+        Node* newNode = new Node(value);
+        if (length == 0) {
+
+            head = newNode;
+            tail = newNode;
+        }
+
+
+    }
+
 
     void DeleteLast() {
         if (length == 0) {
