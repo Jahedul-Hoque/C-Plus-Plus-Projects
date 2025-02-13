@@ -190,8 +190,9 @@ public:
     }
 
     Node* get(int index) {
-
+    // create a node pointer that takes in an integer index
         if (index < 0 || index >= length) {
+            // if index is smaller than 1 or is greater/larger than length
             return nullptr;
         }
         else {
@@ -200,6 +201,7 @@ public:
                 temp = temp->NextNode;
             }
             return temp;
+            // return the temp pointer that points to the memory we want to get
         }
     }
 
