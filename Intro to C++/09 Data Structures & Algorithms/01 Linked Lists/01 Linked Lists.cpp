@@ -208,11 +208,39 @@ public:
     bool set(int index, int value) {
 
         Node* temp = get(index);
+
+        // temp variable gets assigned the index of the function get
         if (temp) {
+        // if temporary variable has an index the value of temp is equal to the value inside that temp
+
             temp->value = value;
             return true;
         }
         return false;
+    }
+
+    bool insert(int index, int value) {
+
+        if (index < 0 || index >=0) {
+            return false;
+        }
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+        if (index == length) {
+            append(value);
+            return true;
+        }
+        else {
+            Node* newNode = new Node(value);
+            Node* temp = get(index - 1);
+            newNode->NextNode = temp->NextNode;
+            temp->NextNode = newNode;
+            length++;
+            return true;
+        }
+        
     }
    
 };
