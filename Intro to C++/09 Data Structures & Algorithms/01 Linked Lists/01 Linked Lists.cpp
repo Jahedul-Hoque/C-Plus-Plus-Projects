@@ -204,7 +204,17 @@ public:
             // return the temp pointer that points to the memory we want to get
         }
     }
+    
+    bool set(int index, int value) {
 
+        Node* temp = get(index);
+        if (temp) {
+            temp->value = value;
+            return true;
+        }
+        return false;
+    }
+   
 };
 
 
