@@ -1,17 +1,22 @@
 <div align="center">
 
-# 🔗 Linked List Implementation in C++ 📋
+# 🔗 Advanced Linked List Implementation in C++ 📋
 
 </div>
 
 ## 📖 Overview
-This project explores **Linked Lists**, a fundamental data structure in C++ that allows dynamic memory allocation and efficient node management. Unlike arrays, linked lists enable efficient insertion and deletion of elements.
+This project explores an **advanced Linked List** implementation in C++, covering essential operations such as **insertion, deletion, searching, and reversing**. Linked Lists allow for efficient **dynamic memory allocation** and flexible node management compared to arrays.
 
 ## 🔑 Key Concepts
-- **Nodes**: Each element in a linked list contains a value and a pointer to the next node.
-- **Head & Tail**: The head points to the first node, and the tail points to the last node.
-- **Dynamic Memory Allocation**: Using `new` to create nodes dynamically.
-- **Iteration**: Traversing through the linked list using a loop.
+- **Nodes & Pointers**: Each node contains a value and a pointer to the next node.
+- **Head & Tail**: The head points to the first node, while the tail points to the last node.
+- **Dynamic Memory Management**: Using `new` to allocate nodes and `delete` for memory cleanup.
+- **Operations & Complexity**:
+  - ✅ Append (O(1))
+  - ✅ Prepend (O(1))
+  - ✅ Deletion (O(1) for head, O(n) for tail/middle)
+  - ✅ Search by index/value (O(n))
+  - ✅ Reversing (O(n))
 
 ## 💻 Code Implementation
 ```cpp
@@ -40,58 +45,104 @@ public:
         Node* NewNode = new Node(value);
         head = NewNode;
         tail = NewNode;
-        length = 1; 
+        length = 1;
     }
-//
+
+    ~LinkedList() {
+        Node* temp = head;
+        while (head) {
+            head = head->NextNode;
+            delete temp;
+            temp = head;
+        }
+    }
+
     void PrintList() {
         Node* temp = head;
         while (temp) {
-            cout << temp->value << endl;
+            cout << temp->value << " " << endl;
             temp = temp->NextNode;
         }
     }
 
-    void GetHead() {
-        cout << "Head: " << head->value << endl;
+    void append(int value) {
+        Node* newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->NextNode = newNode;
+            tail = newNode;
+        }
+        length++;
     }
 
-    void GetTail() {
-        cout << "Tail: " << tail->value << endl;
+    void DeleteLast() {
+        if (length == 0) return;
+        Node* Temp = head;
+        Node* PreviousNode = head;
+        while (Temp->NextNode) {
+            PreviousNode = Temp;
+            Temp = Temp->NextNode;
+        }
+        tail = PreviousNode;
+        tail->NextNode = nullptr;
+        length--;
+        if (length == 0) {
+            head = nullptr;
+            tail = nullptr;
+        }
+        delete Temp;
     }
 
-    void GetLength() {
-        cout << "Length: " << length << endl;
+    void reverse() {
+        Node* temp = head;
+        head = tail;
+        tail = temp;
+        Node* after = temp->NextNode;
+        Node* before = nullptr;
+        for (int i = 0; i < length; i++) {
+            after = temp->NextNode;
+            temp->NextNode = before;
+            before = temp;
+            temp = after;
+        }
     }
 };
 
 int main() {
     LinkedList* MyLinkedList = new LinkedList(4);
-    MyLinkedList->GetHead();
-    MyLinkedList->GetLength();
-    MyLinkedList->GetTail();
+    MyLinkedList->append(5);
+    MyLinkedList->append(4);
+    MyLinkedList->PrintList();
+    cout << endl;
+    MyLinkedList->reverse();
     MyLinkedList->PrintList();
 }
 ```
 
 ## 🔍 Explanation
 1. **Node Class**
-   - Each `Node` object stores an integer value and a pointer to the next node.
+   - Stores an integer value and a pointer to the next node.
    - The `NextNode` pointer is initialized to `nullptr`.
 
 2. **LinkedList Class**
-   - Contains private members: `head`, `tail`, and `length`.
-   - The constructor initializes a linked list with a single node.
-   - Implements methods to print the list, get head, tail, and list length.
+   - Initializes with a single node (head and tail are the same).
+   - Implements key operations: **append, delete, reverse**.
+   - Contains a destructor to free allocated memory.
 
 3. **Operations & Complexity**
-   - **Adding at the End**: `O(1)` (Update tail pointer)
-   - **Removing at the End**: `O(n)` (Traversal required)
-   - **Adding at the Start**: `O(1)` (Update head pointer)
-   - **Removing at the Start**: `O(1)` (Update head pointer)
-   - **Searching by Value/Index**: `O(n)` (Requires traversal)
+   - **Appending a node** → `O(1)`.
+   - **Deleting the last node** → `O(n)` (traversing required).
+   - **Reversing the list** → `O(n)` (each node's pointer is modified).
 
 ## 🎯 Summary
-This project provides a simple **Linked List** implementation in C++. It demonstrates **dynamic memory allocation**, **pointer manipulation**, and **basic linked list operations**.
+This project demonstrates an **optimized Linked List implementation** in C++, incorporating essential features such as **insertion, deletion, and reversing** while maintaining **efficient memory management**.
 
-Stay tuned for more advanced linked list features such as **insertion, deletion, and searching!** 🚀
+Future improvements may include:
+- Implementing **Doubly Linked Lists**.
+- Adding **search and sort functionalities**.
+- Enhancing **error handling and optimizations**.
+
+Stay tuned for more updates as I expand my Linked List knowledge! 🚀
 
