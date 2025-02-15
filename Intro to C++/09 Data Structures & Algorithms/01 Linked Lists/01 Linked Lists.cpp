@@ -242,6 +242,31 @@ public:
         }
         
     }
+
+    void deleteNode(int index) {
+
+        if (index < 0 || index >= length ) {
+            return;
+        }
+        if (index == 0) {
+            return DeleteFirst();
+        }
+        if (index == length - 1) {
+            return DeleteLast();
+        }
+        
+       
+        else{
+            Node* pre = get(index - 1);
+            Node* temp = pre->NextNode;
+            
+            pre->NextNode = temp->NextNode;
+            delete temp;
+            length--;
+        }
+        
+       
+    }
    
 };
 
@@ -284,6 +309,12 @@ int main()
     MyLinkedList->PrintList();
     cout << endl;
     MyLinkedList->insert(3, 3764);
+    MyLinkedList->PrintList();
+    cout << endl;
+    MyLinkedList->deleteNode(0);
+    MyLinkedList->PrintList();
+    cout << endl;
+    MyLinkedList->deleteNode(1);
     MyLinkedList->PrintList();
 }
 
