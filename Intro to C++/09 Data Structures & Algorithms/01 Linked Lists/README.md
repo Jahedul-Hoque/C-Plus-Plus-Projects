@@ -40,9 +40,9 @@ public:
         Node* NewNode = new Node(value);
         head = NewNode;
         tail = NewNode;
-        length = 1;
+        length = 1; 
     }
-
+//
     void PrintList() {
         Node* temp = head;
         while (temp) {
