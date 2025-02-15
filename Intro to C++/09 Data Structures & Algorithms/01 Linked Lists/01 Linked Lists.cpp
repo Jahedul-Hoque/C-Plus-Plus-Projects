@@ -221,7 +221,7 @@ public:
 
     bool insert(int index, int value) {
 
-        if (index < 0 || index >=0) {
+        if (index < 0 || index >length) {
             return false;
         }
         if (index == 0) {
@@ -273,29 +273,17 @@ int main()
    
     MyLinkedList->append(5);
     MyLinkedList->append(4);
-    cout << "This is the current list: " << endl;
+   
+    
     
     MyLinkedList->PrintList();
-    cout << endl;
-    MyLinkedList->GetHead();
+   
    
     cout << endl;
-    MyLinkedList->GetLength();
-   
-    cout << endl;
-    MyLinkedList->GetTail();
-    cout << endl;
-
-
-    MyLinkedList->DeleteLast();
-    cout << "Linked List after deleting 1 value: " << endl;
+    MyLinkedList->insert(1, 2);
     MyLinkedList->PrintList();
-    cout << "Linked lists length after deleting that value - ";
-    MyLinkedList->GetLength();
     cout << endl;
-    cout << MyLinkedList->get(1);
-    cout << endl;
-    cout << endl;
-    cout << endl;
+    MyLinkedList->insert(3, 3764);
+    MyLinkedList->PrintList();
 }
 
