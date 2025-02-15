@@ -267,6 +267,33 @@ public:
         
        
     }
+
+    void reverse() {
+
+        Node* temp = head;
+        head = tail;
+        tail = temp;
+        // swaps head and tail
+        
+        Node* after = temp->NextNode;
+        Node* before = nullptr;
+
+        // makes temps next node equal after and makes the before node equal ptr to create the new list
+
+        for (int i = 0; i < length; i++) {
+            after = temp->NextNode;
+            temp->NextNode = before;
+            // at this point the two lists are broken
+
+            before = temp;
+            // this resets the null ptr to the new number that will then repeat
+
+            temp = after;
+            // because after was previously pointing to the next node of temp, temp can now point to after
+        }
+
+        
+    }
    
 };
 
@@ -316,5 +343,9 @@ int main()
     cout << endl;
     MyLinkedList->deleteNode(1);
     MyLinkedList->PrintList();
+    cout << endl;
+    MyLinkedList->reverse();
+    MyLinkedList->PrintList();
+
 }
 
