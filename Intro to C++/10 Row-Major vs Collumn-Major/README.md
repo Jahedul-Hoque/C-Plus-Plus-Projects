@@ -24,15 +24,7 @@ If the matrix data is stored in a Row-Major based fashion, it will be efficientl
 ✅ **Row-major** keeps data **contiguous in memory**, allowing cache lines (64 bytes) to hold multiple elements.  
 
 
-### Matrix Representation:
-  Col 0  Col 1  Col 2
-+-----+-----+-----+
-|  1  |  2  |  3  |  <- Access row 0 first
-+-----+-----+-----+
-|  4  |  5  |  6  |  <- Then row 1
-+-----+-----+-----+
-|  7  |  8  |  9  |  <- Then row 2
-+-----+-----+-----+
+![image](https://github.com/user-attachments/assets/e1fa870c-06db-4708-9d2b-b39cb8cd7bba)
 
 ### Memory Access pattern (Efficient):
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
@@ -47,17 +39,8 @@ for (int i = 0; i < SIZE; i++) {    // Iterate rows first
 }
 
 ```
+![image](https://github.com/user-attachments/assets/ca634add-1863-4a46-bdc7-3a9288e0d7f8)
 
-### Matrix Representation:
-
-  Col 0  Col 1  Col 2
-+-----+-----+-----+
-|  1  |  4  |  7  |  <- Access column 0 first
-+-----+-----+-----+
-|  2  |  5  |  8  |  <- Then column 1
-+-----+-----+-----+
-|  3  |  6  |  9  |  <- Then column 2
-+-----+-----+-----+
 
 ### Memory Access Pattern (Not Efficient):
 
