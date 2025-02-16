@@ -29,7 +29,7 @@ void columnMajorAccess(vector<vector<int>>& matrix) {
     // Iterate over columns first, then rows (column-major order)
     for (int j = 0; j < SIZE; j++) {
         for (int i = 0; i < SIZE; i++) {
-            matrix[i][j] += 1;  // Access elements in column order
+            matrix[i][j] += 1;  // Adding 1 to each element in the 2d vector
         }
     }
 
