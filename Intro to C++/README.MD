@@ -15,15 +15,14 @@ Welcome to my **C++ learning journey!** This repository contains various C++ pro
 - 📌 [OOP with Inheritance]
 - 📌 [Operator Overloading]
 - 📌 [Dynamic Memory Allocation]
+- 📌 [Row Major vs Column Major]
+- 📌 [Testing Cache L1, L2, L3 Latency]
 
 ## ⏳ Upcoming Project:
 - 🚧 **Data Structures and Algorithms** (In Progress)
 
-5️⃣ Inheritance
-=======
 ## 🔑 Key Topics Covered
 Here are the C++ projects I have worked on, each demonstrating a specific concept:
-
 
 ### 📌 [Pointers and References]
 - Understanding memory addresses and pointers.
@@ -60,26 +59,29 @@ Here are the C++ projects I have worked on, each demonstrating a specific concep
 - Allocating memory dynamically for variables and arrays.
 - Avoiding memory leaks and improving program efficiency.
 
+### 📌 [Row Major vs Column Major]
+- **Key Concept**: **Cache Optimization**
+  - **Row-major access vs column-major access**.
+  - Optimizing memory access patterns for better cache utilization.
+  - **Performance Benchmarking**: Measuring the time it takes to process a 2D matrix of size `1000x1000` with different access patterns.
+  
+### 📌 [Testing Cache L1, L2, L3 Latency]
+- **Key Concept**: **Latency Measurement**
+  - Testing the latency when accessing memory with varying cache levels.
+  - **Performance Benchmarking**: Measure access times for different memory sizes (L1, L2, L3 cache, and RAM).
+
 ## 🎯 Summary
 Throughout this journey, I have developed a strong foundation in **C++ programming**, mastering core concepts and best practices. Each project showcases practical applications of C++ and its capabilities in **memory management, data structures, and object-oriented programming**.
 
 This repository serves as a portfolio of my progress and a resource for anyone looking to learn C++! 🚀
 
-
-
 ## 🌎 Resources & Further Reading
 ### 📖 Courses:
-
-Coursera: C++ Algorithms & Data Structures
-
-MIT OpenCourseWare - Introduction to Algorithms
-
-CS50x Harvard - C++ Fundamentals
+- Coursera: C++ Algorithms & Data Structures
+- MIT OpenCourseWare - Introduction to Algorithms
+- CS50x Harvard - C++ Fundamentals
 
 ### 📚 Books:
-
-"Effective C++" by Scott Meyers
-
-"Algorithms" by Robert Sedgewick
-
-"Data Structures and Algorithm Analysis in C++" by Mark Allen Weiss
+- "Effective C++" by Scott Meyers
+- "Algorithms" by Robert Sedgewick
+- "Data Structures and Algorithm Analysis in C++" by Mark Allen Weiss
