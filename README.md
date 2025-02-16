@@ -22,6 +22,10 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 
 7️⃣ **Memory Management**  
 
+8️⃣ **Row-Major vs Collumn Major** 
+
+9️⃣ **Testing L1 L2 L3 Cache Latency** 
+
 
 
 ### ✅ Planned DSA Topics Covered:  
