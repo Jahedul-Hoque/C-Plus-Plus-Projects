@@ -1,4 +1,6 @@
 #include <iostream>
+#include <memory>  // Required for smart pointers
+
 using namespace std;
 
 class Node {
@@ -6,213 +8,134 @@ public:
     int value;
     // this will be the value being assigned to Node
 
-    Node* NextNode;
-    // this will create a pointer called nextNode pointing to a node
+    unique_ptr<Node> NextNode;
+    // this will create a smart pointer to the next node
 
     Node(int value) {
-
         this->value = value;
-    // this will take whatever paremeter being entered within node and assigned to the variable "value"
-
         this->NextNode = nullptr;
-    /*  this then assigns the "nextNode" variable as nullptr as this class is only used to create a node
-        The other classes will define what the nextNode will point to depending on what class it is.
-    */ 
     }
-
-    
 };
-
 
 class LinkedList {
 
 private:
-    Node* head;
-    Node* tail;
+    unique_ptr<Node> head;
+    Node* tail;  // tail is now a unique_ptr as well
     int length;
-
 
 public:
     LinkedList(int value) {
-
-        Node* NewNode = new Node(value);
-        // the constructer Node will be invoked with a paremeter(value) and will be assigned to the address pointer "newNode"
-
-        head = NewNode;
-        // head will point to the address newNode
-
-        tail = NewNode;
+        head = make_unique<Node>(value);
+        tail = head.get();  // Move ownership to tail as well
         length = 1;
-
-
     }
 
     ~LinkedList() {
-        // the default destructor only deletes the head, tail and length
-        // so we have to create a destructor to also delete the nodes
-
-        Node* temp = head;
-       
-        while (head) {
-            head = head->NextNode;
-            delete temp;
-            temp = head;
-         // set a temporary pointer = to head and while head doesnt equal to node, set head = equal to the next node and delete temp
-         // move temp equal to the new head.
-
-        }
+        // Destructor will automatically clean up the list due to unique_ptr
     }
 
-
     void PrintList() {
-        Node* temp = head;
-        //make a temporary pointer that holds the address that points to head
-
+        Node* temp = head.get();
         while (temp) {
-        // while temp doesnt equal to nullptr
-
             cout << temp->value << " " << endl;
-         // output the value that temp is pointing to
-
-            temp = temp->NextNode;
-        // move temp to the next node
-
+            temp = temp->NextNode.get();  // Move to the next node
         }
-
     }
 
     void append(int value) {
-
-        Node* newNode = new Node(value);
+        auto newNode = make_unique<Node>(value);
         if (length == 0) {
-            head = newNode;
-            tail = newNode;
-        // if linked list is empty, make head and tail equal newNode
+            head = move(newNode);
+            tail = head.get();  // Update tail to point to head
         }
         else {
-            tail->NextNode = newNode;
-            tail = newNode;
-        // otherwise make the current tails nextNode equal to NewNode and make tail the newNode
+            tail->NextNode = move(newNode);
+            tail = tail->NextNode.get();  // Move tail to point to the new node
         }
         length++;
-    
-     
     }
-
-   
-
 
     void DeleteLast() {
-        if (length == 0) {
-            return;
+        if (length == 0) return;
+
+        Node* temp = head.get();
+        Node* previousNode = nullptr;
+
+        while (temp && temp->NextNode) {
+            previousNode = temp;
+            temp = temp->NextNode.get();
         }
-        // if linkedlist is empty then return
+
+        if (previousNode) {
+            previousNode->NextNode = nullptr;
+            tail = previousNode;
+        }
         else {
-            Node* Temp = head;
-            Node* PreviousNode = head;
-
-        // set 2 pointers equal to head
-            while (Temp->NextNode) {
-                PreviousNode = Temp;
-                Temp = Temp->NextNode;
-                // while temps next node isnt nullptr, set previousNode equal to temp
-
-            }
-            tail = PreviousNode;
-        // once Temps next node becomes nullptr, the previous node should be the new tail so set tail = previous node
-
-            tail->NextNode = nullptr;
-        // cut the list off from the about-to-be-deleted node
-            length--;
-            if (length == 0) {
-                head = nullptr;
-                tail = nullptr;
-            }
-        // if the length of the list is now zero, set the tail/heads to be nullptr
-            delete Temp;
-        // finally delete temp
+            head = nullptr;
+            tail = nullptr;
         }
-
+        
+        length--;
     }
 
-    
-
     void GetHead() {
-        cout << "Head: " << head->value << endl;
+        if (head) {
+            cout << "Head: " << head->value << endl;
+        }
     }
 
     void GetTail() {
-        cout << "Tail: " << tail->value << endl;
+        if (tail) {
+            cout << "Tail: " << tail->value << endl;
+        }
     }
 
     void GetLength() {
         cout << "Length: " << length << endl;
     }
 
-   
-
     void prepend(int value) {
-
-        Node* newNode = new Node(value);
+        auto newNode = make_unique<Node>(value);
         if (length == 0) {
-
-            head = newNode;
-            tail = newNode;
+            head = move(newNode);
+            tail = head.get();
         }
         else {
-            newNode->NextNode = head;
-            head = newNode;
+            newNode->NextNode = move(head);
+            head = move(newNode);
         }
         length++;
-
     }
 
     void DeleteFirst() {
+        if (length == 0) return;
 
-        if (length == 0) {
-            return;
+        Node* temp = head.get();
+        if (length == 1) {
+            head = nullptr;
+            tail = nullptr;
         }
         else {
-            Node* temp = head;
-            if (length == 1) {
-                head = nullptr;
-                tail = nullptr;
-            }
-            else
-            {
-                head = head->NextNode;
-
-            }
-            delete temp;
-            length--;
+            head = move(head->NextNode);
         }
-
+        
+        length--;
     }
 
     Node* get(int index) {
-    // create a node pointer that takes in an integer index
-        if (index < 0 || index >= length) {
-            // if index is smaller than 1 or is greater/larger than length
-            return nullptr;
+        if (index < 0 || index >= length) return nullptr;
+
+        Node* temp = head.get();
+        for (int i = 0; i < index; i++) {
+            temp = temp->NextNode.get();
         }
-        else {
-            Node* temp = head;
-            for (int i = 0; i < index; i++) {
-                temp = temp->NextNode;
-            }
-            return temp;
-            // return the temp pointer that points to the memory we want to get
-        }
+        return temp;
     }
-    
+
     bool set(int index, int value) {
-
         Node* temp = get(index);
-
-        // temp variable gets assigned the index of the function get
         if (temp) {
-        // if temporary variable has an index the value of temp is equal to the value inside that temp
-
             temp->value = value;
             return true;
         }
@@ -220,10 +143,8 @@ public:
     }
 
     bool insert(int index, int value) {
+        if (index < 0 || index > length) return false;
 
-        if (index < 0 || index >length) {
-            return false;
-        }
         if (index == 0) {
             prepend(value);
             return true;
@@ -233,119 +154,46 @@ public:
             return true;
         }
         else {
-            Node* newNode = new Node(value);
+            auto newNode = make_unique<Node>(value);
             Node* temp = get(index - 1);
-            newNode->NextNode = temp->NextNode;
-            temp->NextNode = newNode;
+            newNode->NextNode = move(temp->NextNode);
+            temp->NextNode = move(newNode);
             length++;
             return true;
         }
-        
     }
 
     void deleteNode(int index) {
+        if (index < 0 || index >= length) return;
 
-        if (index < 0 || index >= length ) {
-            return;
-        }
         if (index == 0) {
-            return DeleteFirst();
+            DeleteFirst();
         }
-        if (index == length - 1) {
-            return DeleteLast();
+        else if (index == length - 1) {
+            DeleteLast();
         }
-        
-       
-        else{
+        else {
             Node* pre = get(index - 1);
-            Node* temp = pre->NextNode;
+            Node* temp = pre->NextNode.get();
+            pre->NextNode = move(temp->NextNode);
             
-            pre->NextNode = temp->NextNode;
-            delete temp;
             length--;
         }
-        
-       
     }
 
-    void reverse() {
-
-        Node* temp = head;
-        head = tail;
-        tail = temp;
-        // swaps head and tail
-        
-        Node* after = temp->NextNode;
-        Node* before = nullptr;
-
-        // makes temps next node equal after and makes the before node equal ptr to create the new list
-
-        for (int i = 0; i < length; i++) {
-            after = temp->NextNode;
-            temp->NextNode = before;
-            // at this point the two lists are broken
-
-            before = temp;
-            // this resets the null ptr to the new number that will then repeat
-
-            temp = after;
-            // because after was previously pointing to the next node of temp, temp can now point to after
-        }
-
-        
-    }
    
 };
 
-
-
-int main()
-{
-    /*          Linked list : Contains a head and a tail
-                Head points to the first node in the list
-                Tail points to the last node in the list
-
-
-                Adding a node at the end: O(1) since you just set the NULLptr to the new node 
-                Removing a node at the end O(n) since it has to go through every node to delete a node that points to NULLptr
-                
-                Adding a node at the start: O(1) since you just set head to the new node and point that node to the original head
-                Removing a node at the start: O(1) since you just remove the current head node and point to where it was pointing to
-
-                Adding a node in the middle: O(n) since you have to iterate through the nodes to get there
-                Removing a node in the middle: O(n) since you have to iterate through the nodes to get there
-
-                Looking up by value: O(n) since you iterate through the nodes to find if the value exists
-                Looking up by index: O(n) since you iterate through the nodes to search for the index
-
-    */ 
-    
+int main() {
     LinkedList* MyLinkedList = new LinkedList(4);
 
-   
-    MyLinkedList->append(5);
-    MyLinkedList->append(4);
-   
-    
-    
-    MyLinkedList->PrintList();
-   
-   
-    cout << endl;
-    MyLinkedList->insert(1, 2);
-    MyLinkedList->PrintList();
-    cout << endl;
-    MyLinkedList->insert(3, 3764);
-    MyLinkedList->PrintList();
-    cout << endl;
-    MyLinkedList->deleteNode(0);
-    MyLinkedList->PrintList();
-    cout << endl;
-    MyLinkedList->deleteNode(1);
-    MyLinkedList->PrintList();
-    cout << endl;
-    MyLinkedList->reverse();
+    MyLinkedList->append(2);
+    MyLinkedList->append(1);
+  
+    MyLinkedList->insert(3, 67);
+    MyLinkedList->insert(1, 67);
+    MyLinkedList->DeleteLast();
     MyLinkedList->PrintList();
 
+    delete MyLinkedList;
 }
-
