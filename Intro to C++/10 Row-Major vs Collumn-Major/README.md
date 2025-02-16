@@ -69,19 +69,23 @@ Here's how it works when accessing a cache line in detail:
 ### Initial Access (Cache Miss in L1):
 
 Suppose the CPU needs to access matrix[0][0].
+
 If this data is not in L1, the CPU checks if it's in L2.
 
 
 ### Eviction of Data:
 
 L1 is full, so the CPU evicts the least recently used cache line to L2 (if L2 isn’t full).
+
 If the data that was evicted from L1 is still needed soon, it might stay in L2.
+
 L2 and L3 also follow the same eviction strategy: when they’re full, less frequently used data moves to the next cache level.
 
 
 ### Fetching from RAM:
 
 If the CPU needs data from a cache line and that cache line isn't in L1, L2, or L3, it must fetch it from RAM (very slow).
+
 RAM access latency is much higher than cache access, which is why efficient cache usage is so important for performance.
 
 
@@ -90,19 +94,25 @@ RAM access latency is much higher than cache access, which is why efficient cach
 ### L1 Cache: Smallest, fastest, and closest to the CPU cores.
 
 Size: ~32 KB per core.
+
 Latency: ~1-2 cycles.
+
 Purpose: Stores frequently accessed data for fast processing.
 
 ### L2 Cache: Larger and slower than L1 but still fast.
 
 Size: ~256 KB - 2 MB per core.
+
 Latency: ~10-20 cycles.
+
 Purpose: Stores data that doesn't fit in L1 but is still needed for future access.
 
 ### L3 Cache: Largest but slowest of the CPU caches (shared across cores).
 
 Size: ~8-64 MB (depending on the processor).
+
 Latency: ~30-40 cycles.
+
 Purpose: Acts as a buffer between the cores and main RAM.
 
 
