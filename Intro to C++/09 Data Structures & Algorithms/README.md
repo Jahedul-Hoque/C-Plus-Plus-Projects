@@ -15,28 +15,28 @@ Below is the structured learning path I am following, starting with foundational
 1. **Linked List** 🔗  
    - Implemented **Singly Linked List** with basic operations (Insertion, Deletion, Traversal).
    - Explored the concept of **pointers** and **dynamic memory allocation**.
-   - [View Project](./README_LinkedList.md)
+  
 
 2. **Doubly Linked List** 🔄  
    - Introduced **bidirectional node linking**.
    - Efficient **insertions and deletions** at both ends.
    - Memory trade-offs compared to Singly Linked Lists.
-   - [View Project](./README_DoublyLinkedList.md)
+  
 
 3. **Hash Tables** 🔢  
    - Implemented **hash functions** and **collision handling (chaining & open addressing)**.
    - Used **unordered maps** for optimized key-value storage.
-   - [View Project](./README_HashTables.md)
+   
 
 4. **Vectors** 📊  
    - Explored **dynamic arrays** with auto-resizing capabilities.
    - Efficient **random access** and **cache-friendly memory allocation**.
-   - [View Project](./README_Vectors.md)
+
 
 5. **Stacks & Queues** 📥📤  
    - Implemented **LIFO (Last-In-First-Out) Stacks** and **FIFO (First-In-First-Out) Queues**.
    - Used **arrays and linked lists** for stack and queue operations.
-   - [View Project](./README_StacksQueues.md)
+  
 
 ---
 
