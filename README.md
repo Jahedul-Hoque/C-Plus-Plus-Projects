@@ -54,7 +54,7 @@ Here, I apply C++ to build **financial models**, optimize **market data processi
 
 ### ✅ Planned Projects:  
 
-🔹 **Market Data Handler** – Parsing real-time stock market feeds  
+🔹 **Portfolio tracker** – Tracking stock market feeds  
 🔹 **Order Execution Engine** – Simulating trade execution with low-latency techniques  
 🔹 **Backtesting System** – Running historical simulations for trading strategies  
 🔹 **Options Pricing** – Implementing Black-Scholes & Monte Carlo simulations  
