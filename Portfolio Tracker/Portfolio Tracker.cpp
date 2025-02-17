@@ -19,9 +19,9 @@ double getRandomPrice(double basePrice) {
 
 void displayPortfolio(const std::vector<Stock>& portfolio) {
     double totalValue = 0.0;
-    std::cout << "\n📊 Portfolio Overview\n";
-    std::cout << "--------------------------------------\n";
-    std::cout << std::left << std::setw(10) << "Stock" << std::setw(10) << "Qty"
+    std::cout << "\n Portfolio Overview\n";
+    std::cout << "-----------------------------------------\n";
+    std::cout << std::left << std::setw(10) << " Stock" << std::setw(10) << "Qty"
         << std::setw(10) << "Price" << std::setw(15) << "Total Value" << "\n";
     std::cout << "--------------------------------------\n";
 
@@ -37,7 +37,7 @@ void displayPortfolio(const std::vector<Stock>& portfolio) {
     }
 
     std::cout << "--------------------------------------\n";
-    std::cout << "💰 Total Portfolio Value: $" << totalValue << "\n";
+    std::cout << " Total Portfolio Value: $" << totalValue << "\n";
 }
 
 int main() {
@@ -45,20 +45,20 @@ int main() {
 
     // Portfolio setup (tickers, quantities, base prices)
     std::vector<Stock> portfolio = {
-        {"AAPL", 10, 175.0},
-        {"MSFT", 5, 320.0},
-        {"GOOGL", 8, 2800.0},
-        {"TSLA", 12, 720.0}
+        {" AAPL", 10, 175.0},
+        {" MSFT", 5, 320.0},
+        {" GOOGL", 8, 2800.0},
+        {" TSLA", 12, 720.0}
     };
 
     char choice;
     do {
         displayPortfolio(portfolio);
 
-        std::cout << "\n🔄 Refresh prices? (y/n): ";
+        std::cout << "\n Refresh prices? (y/n): ";
         std::cin >> choice;
     } while (choice == 'y' || choice == 'Y');
 
-    std::cout << "📈 Exiting portfolio tracker. Happy investing!\n";
+    std::cout << " Exiting portfolio tracker. Happy investing!\n";
     return 0;
 }
