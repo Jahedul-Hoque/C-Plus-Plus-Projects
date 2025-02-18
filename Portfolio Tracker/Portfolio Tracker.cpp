@@ -24,15 +24,13 @@ void displayPortfolio(const std::vector<Stock>& portfolio) {
     std::cout << std::left << std::setw(10) << " Stock" << std::setw(10) << "Qty" << std::setw(10) << "Price" << std::setw(15) << "Total Value" << "\n";
     std::cout << "--------------------------------------\n";
 
-    for (const auto& stock : portfolio) {
-        double updatedPrice = getRandomPrice(stock.price);
-        double totalStockValue = updatedPrice * stock.quantity;
+    for (const auto& StockObject : portfolio) { //creates a temporary variable that stores 1 object from portfolios list of objects
+        double updatedPrice = getRandomPrice(StockObject.price);
+        // Variable updatedPrice is equal to 
+        double totalStockValue = updatedPrice * StockObject.quantity;
         totalValue += totalStockValue;
 
-        std::cout << std::left << std::setw(10) << stock.ticker
-            << std::setw(10) << stock.quantity
-            << std::setw(10) << std::fixed << std::setprecision(2) << updatedPrice
-            << std::setw(15) << totalStockValue << "\n";
+        std::cout << std::left << std::setw(10) << StockObject.ticker  << std::setw(10) << StockObject.quantity << std::setw(10) << std::fixed << std::setprecision(2) << updatedPrice  << std::setw(15) << totalStockValue << "\n";
     }
 
     std::cout << "--------------------------------------\n";
@@ -40,16 +38,13 @@ void displayPortfolio(const std::vector<Stock>& portfolio) {
 }
 
 int main() {
-    srand(time(0)); // Seed for random price changes
-
-    // Portfolio setup (tickers, quantities, base prices)
+    srand(time(0)); 
+    // time(0) will tell you the current time - srand(time(0)) will give you a new random number based on a formula using the current time in seconds
+    
     std::vector<Stock> portfolio = {
-        {" AAPL", 10, 175.0},
-        {" MSFT", 5, 320.0},
-        {" GOOGL", 8, 2800.0},
-        {" TSLA", 12, 720.0}
+        {" AAPL", 10, 175.0},{" MSFT", 5, 320.0}, {" GOOGL", 8, 2800.0}, {" TSLA", 12, 720.0}
     };
-
+    // creates a vector of stock objects and puts it inside portfolio
     char choice;
     do {
         displayPortfolio(portfolio);
