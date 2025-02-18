@@ -21,8 +21,7 @@ void displayPortfolio(const std::vector<Stock>& portfolio) {
     double totalValue = 0.0;
     std::cout << "\n Portfolio Overview\n";
     std::cout << "-----------------------------------------\n";
-    std::cout << std::left << std::setw(10) << " Stock" << std::setw(10) << "Qty"
-        << std::setw(10) << "Price" << std::setw(15) << "Total Value" << "\n";
+    std::cout << std::left << std::setw(10) << " Stock" << std::setw(10) << "Qty" << std::setw(10) << "Price" << std::setw(15) << "Total Value" << "\n";
     std::cout << "--------------------------------------\n";
 
     for (const auto& stock : portfolio) {
