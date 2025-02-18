@@ -1,27 +1,25 @@
-# 📌 Live Stock Portfolio Tracker in C++  
+# 📈 Stock Portfolio Tracker in C++ 📊
 
-## 📖 Overview  
-The **Live Stock Portfolio Tracker** is a C++ program that simulates real-time stock price updates. It tracks a user's stock holdings, calculates portfolio value, and allows for price refreshes to mimic a dynamic trading environment.  
+## 📖 Overview
 
-This project demonstrates essential **C++ programming skills**, including **structs, vectors, functions, and randomization**—ideal for finance-focused software development.  
+This project is a **real-time stock portfolio tracker** implemented in C++. It uses **vectors, random number generation, and formatted output** to simulate and display stock price fluctuations dynamically.
 
----
+## 🔑 Key Features
 
-## 📌 Key Concepts  
-- **Stock Struct** → Stores each stock’s ticker symbol, quantity, and price.  
-- **Dynamic Pricing** → Uses randomization to simulate real-time stock price fluctuations.  
-- **Portfolio Calculation** → Computes total stock value based on updated prices.  
-- **User Interaction** → Allows users to refresh stock prices and track changes dynamically.  
+- **Uses ****`std::vector`** to manage a dynamic list of stocks.
+- **Generates random price fluctuations** to simulate real-time stock market changes.
+- **Formats output** using `iomanip` for a clear and readable display.
+- **Allows user interaction** to refresh prices and track their investments.
 
----
+## 💻 Code Breakdown
 
-## 💻 Code Implementation  
 ```cpp
 #include <iostream>
-#include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <iomanip>
+#include <vector> // allows creating dynamic arrays
+#include <cstdlib> // generating random numbers
+#include <ctime> // seeding random numbers with the current time and using modulus to make a random small number
+#include <iomanip> // formatting output and aligning table collumns
+//NOT using STD namespace as i've started using lots of new keywords that may be used in other namespaces
 
 struct Stock {
     std::string ticker;
@@ -38,20 +36,17 @@ double getRandomPrice(double basePrice) {
 void displayPortfolio(const std::vector<Stock>& portfolio) {
     double totalValue = 0.0;
     std::cout << "\n Portfolio Overview\n";
-    std::cout << "--------------------------------------\n";
-    std::cout << std::left << std::setw(10) << "Stock" << std::setw(10) << "Qty"
-              << std::setw(10) << "Price" << std::setw(15) << "Total Value" << "\n";
+    std::cout << "-----------------------------------------\n";
+    std::cout << std::left << std::setw(10) << " Stock" << std::setw(10) << "Qty" << std::setw(10) << "Price" << std::setw(15) << "Total Value" << "\n";
     std::cout << "--------------------------------------\n";
 
-    for (const auto& stock : portfolio) {
-        double updatedPrice = getRandomPrice(stock.price);
-        double totalStockValue = updatedPrice * stock.quantity;
+    for (const auto& StockObject : portfolio) { //creates a temporary variable that stores 1 object from portfolios list of objects
+        double updatedPrice = getRandomPrice(StockObject.price);
+        // Variable updatedPrice is equal to 
+        double totalStockValue = updatedPrice * StockObject.quantity;
         totalValue += totalStockValue;
 
-        std::cout << std::left << std::setw(10) << stock.ticker
-                  << std::setw(10) << stock.quantity
-                  << std::setw(10) << std::fixed << std::setprecision(2) << updatedPrice
-                  << std::setw(15) << totalStockValue << "\n";
+        std::cout << std::left << std::setw(10) << StockObject.ticker  << std::setw(10) << StockObject.quantity << std::setw(10) << std::fixed << std::setprecision(2) << updatedPrice  << std::setw(15) << totalStockValue << "\n";
     }
 
     std::cout << "--------------------------------------\n";
@@ -59,16 +54,13 @@ void displayPortfolio(const std::vector<Stock>& portfolio) {
 }
 
 int main() {
-    srand(time(0)); // Seed for random price changes
-
-    // Portfolio setup (tickers, quantities, base prices)
+    srand(time(0)); 
+    // time(0) will tell you the current time - srand(time(0)) will give you a new random number based on a formula using the current time in seconds
+    
     std::vector<Stock> portfolio = {
-        {"AAPL", 10, 175.0},
-        {"MSFT", 5, 320.0},
-        {"GOOGL", 8, 2800.0},
-        {"TSLA", 12, 720.0}
+        {" AAPL", 10, 175.0},{" MSFT", 5, 320.0}, {" GOOGL", 8, 2800.0}, {" TSLA", 12, 720.0}
     };
-
+    // creates a vector of stock objects and puts it inside portfolio
     char choice;
     do {
         displayPortfolio(portfolio);
@@ -79,56 +71,39 @@ int main() {
 
     std::cout << " Exiting portfolio tracker. Happy investing!\n";
     return 0;
-}
+} 
+
 ```
 
----
+## 🔍 Explanation
 
-## 🔍 Explanation  
-### **1. Stock Data Representation**  
-- The `Stock` struct stores **ticker symbol, quantity, and price**.  
-- A **vector of stocks** (`std::vector<Stock> portfolio`) represents a user’s holdings.  
+1. **Stock Struct:**
 
-### **2. Simulating Stock Price Changes**  
-- The `getRandomPrice()` function randomly adjusts a stock’s price by **±10%**.  
+   - Holds `ticker` (symbol), `quantity`, and `price` for each stock.
 
-### **3. Displaying the Portfolio**  
-- The `displayPortfolio()` function:  
-  - Iterates through the portfolio.  
-  - Updates prices dynamically.  
-  - Displays **ticker, quantity, new price, and total value** in a formatted table.  
+2. **Random Price Generator (****`getRandomPrice`****)**:
 
-### **4. User Interaction**  
-- The program **loops until the user exits**, allowing for continuous price refreshes.  
+   - Uses `rand()` to apply a random price change between **-10% and +10%**.
 
----
+3. **Portfolio Display (****`displayPortfolio`****)**:
 
-## 🚀 Features & Benefits  
-✅ **Simulates a real hedge fund trading environment** 📈  
-✅ **Self-contained** → No external files or APIs required 🔥  
-✅ **Real-time stock price updates** with **randomized fluctuations** 🔄  
-✅ **Beginner-friendly C++ concepts** including `struct`, `vector`, and `iomanip` 📚  
+   - Loops through each stock, updates its price, and prints a formatted table.
+   - Uses `std::setw()` and `std::fixed` for alignment and precision.
 
----
+4. **User Interaction (****`main`****)**:
 
-## ⚠️ Potential Enhancements  
-🔹 **Integrate an API** (Yahoo Finance) for real stock prices.  
-🔹 **Add trade functionality** → Buy/Sell stocks interactively.  
-🔹 **Track historical price changes** over multiple refresh cycles.  
+   - Continuously **refreshes prices** until the user decides to exit.
 
----
+## 🚀 Features to Expand
 
-## 🎯 How to Run  
-1️⃣ **Compile the program:**  
-```sh
-g++ stock_tracker.cpp -o stock_tracker
-```
-2️⃣ **Run the program:**  
-```sh
-./stock_tracker
-```
-3️⃣ **Press `y`** to refresh stock prices or `n` to exit.  
+✅ **User-defined stock additions**
+✅ **Historical price tracking**
+✅ **Integration with real stock APIs**
 
----
+## 🎯 Summary
 
-🛠️ Happy Coding! 🚀
+This **Stock Portfolio Tracker** is an interactive C++ program that simulates **real-time stock price updates** using **vectors, randomization, and formatted tables**. It demonstrates **dynamic memory handling**, **user input processing**, and **randomized financial simulations**. 🚀
+
+Happy Coding! 🎉
+
+
