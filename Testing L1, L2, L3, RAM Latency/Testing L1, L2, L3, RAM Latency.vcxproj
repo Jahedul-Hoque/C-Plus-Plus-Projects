@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b7ad8a93-29a6-4d5f-9367-469322c339c4}</ProjectGuid>
-    <RootNamespace>My11CacheLatency</RootNamespace>
+    <ProjectGuid>{bedccd89-8347-4659-a473-0d8a6aa754cd}</ProjectGuid>
+    <RootNamespace>TestingL1L2L3RAMLatency</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="11 Cache Latency.cpp" />
+    <ClCompile Include="Testing L1, L2, L3, RAM Latency.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

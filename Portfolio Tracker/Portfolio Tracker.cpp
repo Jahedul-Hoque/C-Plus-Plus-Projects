@@ -52,7 +52,8 @@ int main() {
         std::cout << "\n Refresh prices? (y/n): ";
         std::cin >> choice;
     } while (choice == 'y' || choice == 'Y');
-
-    std::cout << " Exiting portfolio tracker. Happy investing!\n";
-    return 0;
+   
+        std::cout << " Exiting portfolio tracker. Happy investing!\n";
+        return 0;
+    
 } 

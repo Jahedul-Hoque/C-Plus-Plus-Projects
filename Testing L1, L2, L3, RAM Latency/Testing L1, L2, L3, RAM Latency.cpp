@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <chrono>
 
@@ -13,7 +13,7 @@ double measure_latency(size_t vector_size) {
 
     // starts the timer
 
-    
+
     for (size_t i = 0; i < vector_size; i += 16) {
         sum += vec[i];
         // Access memory with a large stride to avoid prefetching

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b8d1c00d-8823-4206-8c01-e8c6b652ae15}</ProjectGuid>
-    <RootNamespace>My09RowMajorvsCollumnMajor</RootNamespace>
+    <ProjectGuid>{5e695c18-e0a2-4eb7-975f-5f1b3c039792}</ProjectGuid>
+    <RootNamespace>RowMajorvsCollumn</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="09 Row-Major vs Collumn-Major.cpp" />
+    <ClCompile Include="Row Major vs Collumn.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

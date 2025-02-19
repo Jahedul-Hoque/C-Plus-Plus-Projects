@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="11 Cache Latency.cpp">
+    <ClCompile Include="Row Major vs Collumn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
