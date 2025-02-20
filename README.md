@@ -48,8 +48,11 @@ Here, I apply C++ to build **financial models**, optimize **market data processi
 <progress value="0" max="4"></progress> **(25% Completed)**
 
 ✅ **Portfolio Tracker** – Stimulating basic portfolio tracker using random number generating function 
+
 ⏳ **Order Execution Engine** – Simulating trade execution with low-latency techniques  
+
 ⏳ **Backtesting System** – Running historical simulations for trading strategies  
+
 ⏳ **Options Pricing** – Implementing Black-Scholes & Monte Carlo simulations   
 
 ---
