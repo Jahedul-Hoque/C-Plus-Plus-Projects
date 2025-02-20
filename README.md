@@ -35,7 +35,7 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 ⏳ **Symbol Tables**  
 ⏳ **Trees**  
 
-📌 **Each topic has its own subfolder in `intro-to-cpp/` with code implementations and READMEs.**  
+📌 **Each topic has its own subfolder in `Intro to C++/09 Data Structures & Algorithms` with code implementations and READMEs.**  
 
 ---
 
