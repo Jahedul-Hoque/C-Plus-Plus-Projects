@@ -1,14 +1,15 @@
 #include <iostream>
 #include <thread>
+#include <atomic>
 
 
 
 int main()
 {
-	int counter = 0;
+	std::atomic <int> counter = 0;
 	auto work = [&counter] {
 	// work will be a random data type and will use the reference counter
-		for (int i = 0;i < 100; i++)
+		for (int i = 0;i < 1000000; i++)
 			counter++;
 		};
 
@@ -20,7 +21,7 @@ int main()
 
 	t1.join();
 	t2.join();
-	// joining both threads together
+	// joining both threads together so that it doesnt exit code prematurely
 
 
 	std::cout << counter << "\n";
