@@ -6,16 +6,16 @@
 
 int main()
 {
-	std::atomic <int> counter = 0;
-	auto work = [&counter] {
+	std::atomic <int> PortfolioValue = 0;
+	auto trade = [&PortfolioValue] {
 	// work will be a random data type and will use the reference counter
 		for (int i = 0;i < 1000000; i++)
-			counter++;
+			PortfolioValue++;
 		};
 
 
-	std::thread t1(work);
-	std::thread t2(work);
+	std::thread t1(trade);
+	std::thread t2(trade);
 	// using 2 threads to increment counter at the same time
 
 
@@ -24,7 +24,7 @@ int main()
 	// joining both threads together so that it doesnt exit code prematurely
 
 
-	std::cout << counter << "\n";
+	std::cout << "Your Portfolio value is " << PortfolioValue << " GBP.\n";
 	return 0;
 	
 }
