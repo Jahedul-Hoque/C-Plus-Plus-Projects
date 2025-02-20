@@ -39,19 +39,18 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 
 ---
 
-## 💰 **Financial & Trading Systems (Advanced Projects)**  
+## 💰 **Financial & Trading Systems (Financial Projects)**  
 
 Here, I apply C++ to build **financial models**, optimize **market data processing**, and experiment with **low-latency trading strategies**.  
 
 ### ✅ Planned Projects:  
 
-<progress value="0" max="3"></progress> **(0% Started)**
+<progress value="0" max="4"></progress> **(25% Completed)**
 
+✅ **Portfolio Tracker** – Stimulating basic portfolio tracker using random number generating function 
 ⏳ **Order Execution Engine** – Simulating trade execution with low-latency techniques  
 ⏳ **Backtesting System** – Running historical simulations for trading strategies  
-⏳ **Options Pricing** – Implementing Black-Scholes & Monte Carlo simulations  
-
-📌 **These will be stored in `trading-systems/` with proper documentation.**  
+⏳ **Options Pricing** – Implementing Black-Scholes & Monte Carlo simulations   
 
 ---
 
