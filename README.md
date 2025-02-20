@@ -25,11 +25,11 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 
 ### ✅ Planned DSA Topics Covered:  
 
-<progress value="3" max="7"></progress> **(14% In Progress)**
+<progress value="3" max="7"></progress> **(43% In Progress)**
 
 1️⃣ **Linked Lists** ✅  
-2️⃣ **Doubly Linked Lists** ⏳  
-3️⃣ **Hash Tables** ⏳  
+2️⃣ **Doubly Linked Lists** ✅  
+3️⃣ **Hash Tables** ✅  
 4️⃣ **Sorting Algorithms** ⏳  
 5️⃣ **Vectors** ⏳  
 6️⃣ **Symbol Tables** ⏳  
