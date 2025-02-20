@@ -19,6 +19,7 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 7️⃣ **Memory Management** ✅  
 8️⃣ **Row-Major vs Column Major** ✅  
 9️⃣ **Testing L1 L2 L3 Cache Latency** ✅  
+10️⃣ **Atomic Operations** ✅
 
 ---
 
