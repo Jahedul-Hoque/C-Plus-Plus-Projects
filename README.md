@@ -54,12 +54,6 @@ Here, I apply C++ to build **financial models**, optimize **market data processi
 
 ### ✅ Planned Projects:  
 
-🔹 **Portfolio tracker** – Tracking stock market feeds 
-
-🔹 **Row Major vs Collumn Major** – Measuring latency speed of Row based loops vs Collumn Based Loops
-
-🔹 **Testing L1 L2 L3 and RAM Latency**– Simulating trade execution with low-latency techniques
-
 🔹 **Order Execution Engine** – Simulating trade execution with low-latency techniques 
  
 🔹 **Backtesting System** – Running historical simulations for trading strategies  
