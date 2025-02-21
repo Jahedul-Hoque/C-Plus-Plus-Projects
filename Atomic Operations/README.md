@@ -4,6 +4,7 @@
 
 </div>
 
+
 ## 📖 Overview
 This project demonstrates **multi-threading in C++** using **`std::thread`** and **`std::atomic`** to ensure **safe concurrent access** to a shared portfolio value. The program runs two threads that **increment the portfolio value simultaneously**, showcasing how atomic operations prevent race conditions.
 
