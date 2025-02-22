@@ -13,8 +13,9 @@ void Trade(std::string TraderName) {
     std::unique_lock<mutex> TradeLock(Lock);
     // making a local Mutex Object
     std::cout << TraderName << " is setting up the systematic trading applications\n";
-    
+    std::this_thread::sleep_for(chrono::seconds(1));
     std::cout << TraderName << " is done setting up the algorithms. \n";
+    std::this_thread::sleep_for(chrono::seconds(2));
     TradeLock.unlock();
     // the TradeLock auto unlocks when Lock goes out of scope
    
