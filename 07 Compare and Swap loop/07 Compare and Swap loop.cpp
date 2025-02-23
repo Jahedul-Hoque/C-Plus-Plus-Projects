@@ -33,6 +33,8 @@ void processTrade(int trade_id, int trade_amount) {
     std::cout << "[Trade " << trade_id << "] Executed trade of $" << trade_amount
         << ". New Balance: $" << new_balance << std::endl;
     std::cout << std::endl;
+    // the CPU writes to the console as soon as the threads finish their processes
+    // one way of ordering the trades is by storing each value into a map and store it as a key-value pair.
 }
 
 int main() {
@@ -50,9 +52,10 @@ int main() {
     for (int i = 0; i < num_trades; i++) {
         int trade_amount = rand();
         traders.emplace_back(processTrade, i + 1, trade_amount);
+        // create a new thread using .emplace_back
     }
 
-    // Join all threads
+    // For all the threads inside traders, join all threads
     for (auto& t : traders) {
         t.join();
     }
