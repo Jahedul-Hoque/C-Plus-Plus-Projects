@@ -20,7 +20,8 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 ✔ **Row-Major vs Column Major**  
 ✔ **Testing L1 L2 L3 Cache Latency**  
 ✔ **Atomic Operations**  
-✔ **Mutex & Guard Lock**  
+✔ **Mutex & Guard Lock**
+✔ **Compare & Swap Function**
 
 ---
 
