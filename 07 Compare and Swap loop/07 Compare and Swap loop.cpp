@@ -17,7 +17,7 @@ void processTrade(int trade_id, int trade_amount) {
         if (expected_balance < trade_amount) {
             std::cout << "[Trade " << trade_id << "] Insufficient funds. Balance: $"
                 << expected_balance << ", Trade: $" << trade_amount << std::endl;
-            std::cout<< std::endl;
+            std::cout << std::endl;
             return;  // Reject trade
         }
 
@@ -46,8 +46,8 @@ int main() {
     std::vector<std::thread> traders;
 
     // Simulate multiple traders making concurrent trades
-    
-    
+
+
 
     for (int i = 0; i < num_trades; i++) {
         int trade_amount = rand();
