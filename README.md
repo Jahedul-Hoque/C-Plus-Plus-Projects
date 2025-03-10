@@ -3,7 +3,7 @@
   <b>Documenting my journey learning C++ as an End User Service Engineer at a HedgeFund</b>
 </p>
 
-## **📌 Overview**
+##  **📌 Overview**
 This repository showcases **C++ projects** focused on **financial data analysis, market data processing, and trade analytics**. Each project includes hands-on tasks such as **programming with low latency and financial computations**, which are crucial skills for C++ developers in trading firms, hedge funds, and banks.
 
 ### ✅ General Topics Covered:  
