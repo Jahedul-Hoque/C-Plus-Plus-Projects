@@ -30,7 +30,7 @@ public:
         tail = head.get();  // Move ownership to tail as well
         length = 1;
     }
-
+  
     ~LinkedList() {
         // Destructor will automatically clean up the list due to unique_ptr
     }
