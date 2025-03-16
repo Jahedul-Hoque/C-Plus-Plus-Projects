@@ -21,7 +21,7 @@ class LinkedList {
 
 private:
     unique_ptr<Node> head;
-    Node* tail;  // tail is now a unique_ptr as well
+    Node* tail;  // tail is a raw pointer
     int length;
 
 public:
