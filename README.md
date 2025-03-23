@@ -1,4 +1,4 @@
-<h1 align="center">🚀 My C++ Projects</h1>
+<h1 align="center">🚀 My C++ Projects</h1>  
 <p align="center">
   <b>Documenting my journey learning C++ as an End User Service Engineer at a HedgeFund</b>
 </p>    
