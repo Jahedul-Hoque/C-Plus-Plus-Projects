@@ -9,7 +9,7 @@ This repository showcases **C++ projects** focused on **financial data analysis,
 ### ✅ General Topics Covered:  
 
 <progress value="10" max="10"></progress> **(100% Complete)**
-
+  
 ✔ **Pointers and References**  
 ✔ **Functions and Declarations**  
 ✔ **Recursions**  
